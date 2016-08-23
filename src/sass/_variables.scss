@@ -1,0 +1,52 @@
+/*********************
+
+Authors:
+	Jay Tang
+
+Stylesheet:
+	Variables stylesheet
+
+*********************/
+
+// colours
+
+$colour-primary: #3083a9;
+$colour-secondary: #eb714f;
+
+$colour-background: #f9f6f2;
+$colour-background-beta: #fff;
+
+$colour-header: #374049;
+$colour-header-beta: #fff;
+
+$colour-copy: #333;
+
+// fonts
+
+$fontMrDafoe: "MrDafoe", "Times", "Times New Roman", serif;;
+$fontWhitneyBlack: "WhitneyHTF-Black", "Arial", "Helvetica", sans-serif;
+$fontWhitneyBold: "WhitneyHTF-Bold", "Arial", "Helvetica", sans-serif;
+$fontWhitneyLight: "WhitneyHTF-Light", "Arial", "Helvetica", sans-serif;
+$fontWhitneyYellowtail: "Yellowtail-Regular", "Times", "Times New Roman", serif;;
+
+// sprites
+
+// create the sprite icon folders and put this back in
+// $sprites: sprite-map("icons/*.png");
+// $sprites2x: sprite-map("icons-2x/*.png");
+
+// layout
+
+$grid-columns : 12;
+$grid-width : 960px;
+$grid-gutter : 10px;
+$grid-padding-outer : 20px;
+
+// breakpoints
+
+$breakpoints: (
+	(phone 		480px)
+	(tablet 	680px)
+	(desktop 	960px)
+	(extended 	1440px)
+);

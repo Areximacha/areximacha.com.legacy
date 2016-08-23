@@ -1,0 +1,145 @@
+/*********************
+
+Authors:
+	Jay Tang
+
+Stylesheet:
+	Base stylesheet
+
+*********************/
+
+html {
+
+}
+
+body {
+	color: $colour-copy;
+	font-size: 100%;
+	line-height: 100%;
+	font-family: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
+	font-weight: 300;
+}
+
+* {
+	-webkit-tap-highlight-color: transparent;
+}
+
+p,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+div {
+	margin: 0;
+	padding: 0;
+	font-weight: normal;
+	-webkit-text-rendering: optimizeLegibility;
+	-moz-text-rendering: optimizeLegibility;
+	-ms-text-rendering: optimizeLegibility;
+	-o-text-rendering: optimizeLegibility;
+	text-rendering: optimizeLegibility;
+	-webkit-font-smoothing: antialiased;
+	-moz-font-smoothing: antialiased;
+	-ms-font-smoothing: antialiased;
+	-o-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+	font-smoothing: antialiased;
+}
+
+h1 {
+	font-size: 85px;
+	text-transform: uppercase;
+	line-height: 0.9em;
+	font-weight: bold;
+	color: $colour-header;
+
+	@include breakpoint(false, desktop) {
+		font-size: 75px;
+	}
+
+	@include breakpoint(false, tablet) {
+		font-size: 48px;
+	}
+}
+
+h2 {
+	font-size: 48px;
+  	text-align: center;
+	margin: 10px 0;
+	color: $colour-header;
+	line-height: 0.9;
+
+	&.h2-beta{
+		color: $colour-header-beta;
+	}
+
+
+	@include breakpoint(false, desktop) {
+		font-size: 40px;
+	}
+
+	@include breakpoint(false, tablet) {
+		font-size: 35px;
+		line-height: 1.1;
+	}
+}
+
+h3 {
+
+	font-size: 30px;
+
+	color: $colour-header;
+	text-transform: uppercase;
+	font-weight: bold;
+	line-height: 0.9;
+
+	@include breakpoint(false, desktop) {
+		font-size: 25px;
+	}
+
+	@include breakpoint(false, tablet) {
+		font-size: 20px;
+	}
+}
+
+p {
+	font-size: 14px;
+	padding: 7px 0;
+}
+
+a {
+	text-decoration: none;
+	color: inherit;
+}
+
+ol {
+	list-style-type: decimal;
+
+	li {
+		margin-left: 15px;
+		margin-bottom: 10px;
+	}
+}
+
+strong {
+	font-weight: 600;
+}
+
+// i is now used for icons
+i {
+	display: inline-block;
+	background-repeat: no-repeat;
+}
+
+.hide {
+    display: none;
+}
+
+// http://css-tricks.com/snippets/css/clear-fix/
+.clearfix:after {
+  content: "";
+  display: table;
+  clear: both;
+}
