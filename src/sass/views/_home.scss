@@ -7,3 +7,81 @@ Stylesheet:
 	Home stylesheet
 
 *********************/
+
+.hero-container {
+	padding: 50px;
+	background-color: #333;
+}
+
+.neon-outer {
+	display: inline-block;
+	border: 2px solid #fff;
+	border-radius: 10px;
+	box-shadow: 0 0 2px #fff, 0 0 5px #fff, 0 0 10px #fff, 0 0 15px #FF1177, 0 0 20px #FF1177, 0 0 40px #FF1177, inset 0 0 2px #fff, inset 0 0 5px #fff, inset 0 0 10px #fff, inset 0 0 15px #FF1177, inset 0 0 20px #FF1177, inset 0 0 40px #FF1177;
+	@include animation(flicker 5s linear infinite alternate);
+}
+
+.neon {
+	text-align: center;
+	font-size: 50px;
+	margin: 20px;
+	color: #fff;
+	font-family: $fontbeon;
+	text-shadow: 0 0 5px #fff, 0 0 10px #fff, 0 0 15px #fff, 0 0 20px #FF1177, 0 0 35px #FF1177, 0 0 40px #FF1177, 0 0 50px #FF1177, 0 0 75px #FF1177;
+	@include animation(flicker 5s linear infinite alternate);
+}
+
+@include keyframes(flicker) {
+	0% {
+		opacity: 1;
+	}
+
+	49% {
+		opacity: 1;
+	}
+
+	50% {
+		opacity: 0;
+	}
+
+	51% {
+		opacity: 0.7;
+	}
+
+	52% {
+		opacity: 0;
+	}
+
+	53% {
+		opacity: 0.7;
+	}
+
+	54% {
+		opacity: 0;
+	}
+
+	55% {
+		opacity: 0.7;
+	}
+
+	79% {
+		opacity: 0.7;
+	}
+
+	79.5% {
+		opacity: 0;
+	}
+
+	80% {
+		opacity: 1;
+	}
+
+	80.5% {
+		opacity: 0;
+	}
+
+	81% {
+		opacity: 1;
+	}
+
+}
