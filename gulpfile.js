@@ -16,7 +16,7 @@ var distDir = 'www/_includes';
 
 // Lint Task
 gulp.task('lint', function() {
-    return gulp.src(srcDir + '/js/**/*.js')
+    return gulp.src([srcDir + '/js/**/*.js', '!' + srcDir + '/js/vendor/*.js'])
         .pipe(jshint())
         .pipe(jshint.reporter('default'));
 });
@@ -33,7 +33,7 @@ gulp.task('compass', function() {
 
 // Concatenate JS
 gulp.task('concat', function() {
-    return gulp.src(srcDir + '/js/**/*.js')
+    return gulp.src([srcDir + '/js/**/*.js', '!' + srcDir + '/js/vendor/*.js'])
         .pipe(concat('main.js'))
         .pipe(gulp.dest(distDir + '/js'));
 });
@@ -55,6 +55,12 @@ gulp.task('imagemin', function() {
             optimizationLevel: 7
         }))
         .pipe(gulp.dest(distDir + '/img'));
+});
+
+// Move vendor scripts
+gulp.task('vendor', function() {
+    return gulp.src(srcDir + '/js/vendor/*')
+        .pipe(gulp.dest(distDir + '/js/vendor'));
 });
 
 // Move fonts
@@ -83,6 +89,6 @@ gulp.task('watch', function() {
 // Default Task
 gulp.task('default', ['lint', 'compass', 'concat', 'watch']);
 // Develop Task
-gulp.task('dev', ['clean:dist', 'lint', 'compass', 'concat', 'imagemin', 'fonts', 'templates']);
+gulp.task('dev', ['clean:dist', 'lint', 'compass', 'concat', 'imagemin', 'vendor', 'fonts', 'templates']);
 // Dist Task
-gulp.task('dist', ['clean:dist', 'lint', 'compass', 'concat', 'uglify', 'imagemin', 'fonts', 'templates']);
+gulp.task('dist', ['clean:dist', 'lint', 'compass', 'concat', 'uglify', 'imagemin', 'vendor', 'fonts', 'templates']);

@@ -10,11 +10,12 @@ Stylesheet:
 
 // colours
 
-$colour-primary: #3083a9;
+$colour-primary: #FF1177;
 $colour-secondary: #eb714f;
 
 $colour-background: #f9f6f2;
 $colour-background-beta: #fff;
+$colour-background-neg: #333;
 
 $colour-header: #374049;
 $colour-header-beta: #fff;
@@ -23,8 +24,8 @@ $colour-copy: #333;
 
 // fonts
 
-$fontBauhaus: "Bauhaus", "Times", "Times New Roman", serif;
-$fontbeon: "beon", "Times", "Times New Roman", serif;
+$fontbeon: "beon", "Arial", "Helvetica", sans-serif;
+// $fontbeon: "beon", "Times", "Times New Roman", serif;
 //$fontWhitneyBlack: "WhitneyHTF-Black", "Arial", "Helvetica", sans-serif;
 
 // sprites

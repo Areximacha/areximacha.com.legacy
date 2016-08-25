@@ -454,8 +454,9 @@ h3 {
 }
 
 p {
-  font-size: 14px;
-  padding: 7px 0;
+  font-size: 16px;
+  line-height: 24px;
+  padding: 20px 0;
 }
 
 a {
@@ -490,72 +491,11 @@ i {
   clear: both;
 }
 
-/*********************
-
-Authors:
-	Jay Tang
-
-Stylesheet:
-	GUI stylesheet
-
-*********************/
-/******************************************************************
-Modules
-******************************************************************/
-/*********************
-
-Authors:
-	Jay Tang
-
-Stylesheet:
-	Header module stylesheet
-
-*********************/
-/*********************
-
-Authors:
-	Jay Tang
-
-Stylesheet:
-	Footer module stylesheet
-
-*********************/
-/******************************************************************
-Views
-******************************************************************/
-/*********************
-
-Authors:
-	Jay Tang
-
-Stylesheet:
-	Home stylesheet
-
-*********************/
-.hero-container {
-  padding: 50px;
-  background-color: #333;
+section {
+  padding: 100px 0;
 }
 
-.neon-outer {
-  display: inline-block;
-  border: 2px solid #fff;
-  border-radius: 10px;
-  box-shadow: 0 0 2px #fff, 0 0 5px #fff, 0 0 10px #fff, 0 0 15px #FF1177, 0 0 20px #FF1177, 0 0 40px #FF1177, inset 0 0 2px #fff, inset 0 0 5px #fff, inset 0 0 10px #fff, inset 0 0 15px #FF1177, inset 0 0 20px #FF1177, inset 0 0 40px #FF1177;
-  -webkit-animation: flicker 5s linear infinite alternate;
-  -moz-animation: flicker 5s linear infinite alternate;
-  -ms-animation: flicker 5s linear infinite alternate;
-  -o-animation: flicker 5s linear infinite alternate;
-  animation: flicker 5s linear infinite alternate;
-}
-
-.neon {
-  text-align: center;
-  font-size: 50px;
-  margin: 20px;
-  color: #fff;
-  font-family: "beon", "Times", "Times New Roman", serif;
-  text-shadow: 0 0 5px #fff, 0 0 10px #fff, 0 0 15px #fff, 0 0 20px #FF1177, 0 0 35px #FF1177, 0 0 40px #FF1177, 0 0 50px #FF1177, 0 0 75px #FF1177;
+.flicker {
   -webkit-animation: flicker 5s linear infinite alternate;
   -moz-animation: flicker 5s linear infinite alternate;
   -ms-animation: flicker 5s linear infinite alternate;
@@ -727,19 +667,130 @@ Stylesheet:
     opacity: 1;
   }
 }
-@-webkit-keyframes neon1 {
-  from {
-    text-shadow: 0 0 10px #fff, 0 0 20px #fff, 0 0 30px #fff, 0 0 40px #FF1177, 0 0 70px #FF1177, 0 0 80px #FF1177, 0 0 100px #FF1177, 0 0 150px #FF1177;
-  }
-  to {
-    text-shadow: 0 0 5px #fff, 0 0 10px #fff, 0 0 15px #fff, 0 0 20px #FF1177, 0 0 35px #FF1177, 0 0 40px #FF1177, 0 0 50px #FF1177, 0 0 75px #FF1177;
-  }
+/*********************
+
+Authors:
+	Jay Tang
+
+Stylesheet:
+	GUI stylesheet
+
+*********************/
+/******************************************************************
+Modules
+******************************************************************/
+/*********************
+
+Authors:
+	Jay Tang
+
+Stylesheet:
+	Header module stylesheet
+
+*********************/
+header {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 60px;
+  background-color: #fff;
+  z-index: 2;
 }
-@-webkit-keyframes neon2 {
-  from {
-    box-shadow: 0 0 2px #fff, 0 0 5px #fff, 0 0 10px #fff, 0 0 15px #FF1177, 0 0 20px #FF1177, 0 0 40px #FF1177, inset 0 0 2px #fff, inset 0 0 5px #fff, inset 0 0 10px #fff, inset 0 0 15px #FF1177, inset 0 0 20px #FF1177, inset 0 0 40px #FF1177;
-  }
-  to {
-    box-shadow: 0 0 4px #fff, 0 0 10px #fff, 0 0 20px #fff, 0 0 30px #FF1177, 0 0 40px #FF1177, 0 0 80px #FF1177, inset 0 0 4px #fff, inset 0 0 10px #fff, inset 0 0 20px #fff, inset 0 0 30px #FF1177, inset 0 0 40px #FF1177, inset 0 0 80px #FF1177;
-  }
+
+/*********************
+
+Authors:
+	Jay Tang
+
+Stylesheet:
+	Footer module stylesheet
+
+*********************/
+/******************************************************************
+Views
+******************************************************************/
+/*********************
+
+Authors:
+	Jay Tang
+
+Stylesheet:
+	Home stylesheet
+
+*********************/
+.hero-container {
+  position: relative;
+  padding: 300px 0 200px;
+  background-color: #333;
+  text-align: center;
+  background-image: url("/_includes/img/backgrounds/bg-hero.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+  box-shadow: inset 0 0 200px #000;
+}
+
+.overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  background-color: #000;
+  height: 100%;
+  width: 100%;
+  opacity: 0.75;
+}
+
+.neon-outer {
+  display: inline-block;
+  border: 2px solid #fff;
+  border-radius: 10px;
+  box-shadow: 0 0 2px #fff, 0 0 5px #fff, 0 0 10px #fff, 0 0 15px #FF1177, 0 0 20px #FF1177, 0 0 40px #FF1177, inset 0 0 2px #fff, inset 0 0 5px #fff, inset 0 0 10px #fff, inset 0 0 15px #FF1177, inset 0 0 20px #FF1177, inset 0 0 40px #FF1177;
+}
+
+.neon {
+  text-align: center;
+  font-size: 50px;
+  margin: 20px;
+  color: #fff;
+  padding: 7px 0;
+  line-height: 16px;
+  font-family: "beon", "Arial", "Helvetica", sans-serif;
+  text-shadow: 0 0 5px #fff, 0 0 10px #fff, 0 0 15px #fff, 0 0 20px #FF1177, 0 0 35px #FF1177, 0 0 40px #FF1177, 0 0 50px #FF1177, 0 0 75px #FF1177;
+}
+
+.section-profile {
+  padding: 100px 0 150px;
+}
+.section-profile h2 {
+  margin-bottom: 70px;
+}
+
+.section-work {
+  position: relative;
+  background-color: #333;
+  padding: 100px 0 200px;
+}
+
+.bg-work {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+  box-shadow: inset 0 0 200px #000;
+}
+.bg-work.venture {
+  background-image: url("/_includes/img/backgrounds/work-venture.jpg");
+  background-position: bottom;
+}
+
+.selector-work {
+  background-color: #fff;
+  height: 300px;
 }

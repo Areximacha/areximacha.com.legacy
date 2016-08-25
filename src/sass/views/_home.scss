@@ -9,16 +9,33 @@ Stylesheet:
 *********************/
 
 .hero-container {
-	padding: 50px;
-	background-color: #333;
+	position: relative;
+	padding: 300px 0 200px;
+	background-color: $colour-background-neg;
+	text-align: center;
+	background-image: url("/_includes/img/backgrounds/bg-hero.jpg");
+	background-repeat: no-repeat;
+	background-size: cover;
+	background-position: center;
+	background-attachment: fixed;
+	box-shadow: inset 0 0 200px #000;
+}
+
+.overlay {
+	position: absolute;
+	top: 0;
+	left: 0;
+	background-color: #000;
+	height: 100%;
+	width: 100%;
+	opacity: 0.75;
 }
 
 .neon-outer {
 	display: inline-block;
 	border: 2px solid #fff;
 	border-radius: 10px;
-	box-shadow: 0 0 2px #fff, 0 0 5px #fff, 0 0 10px #fff, 0 0 15px #FF1177, 0 0 20px #FF1177, 0 0 40px #FF1177, inset 0 0 2px #fff, inset 0 0 5px #fff, inset 0 0 10px #fff, inset 0 0 15px #FF1177, inset 0 0 20px #FF1177, inset 0 0 40px #FF1177;
-	@include animation(flicker 5s linear infinite alternate);
+	box-shadow: 0 0 2px #fff, 0 0 5px #fff, 0 0 10px #fff, 0 0 15px $colour-primary, 0 0 20px $colour-primary, 0 0 40px $colour-primary, inset 0 0 2px #fff, inset 0 0 5px #fff, inset 0 0 10px #fff, inset 0 0 15px $colour-primary, inset 0 0 20px $colour-primary, inset 0 0 40px $colour-primary;
 }
 
 .neon {
@@ -26,62 +43,45 @@ Stylesheet:
 	font-size: 50px;
 	margin: 20px;
 	color: #fff;
+	padding: 7px 0;
+	line-height: 16px;
 	font-family: $fontbeon;
-	text-shadow: 0 0 5px #fff, 0 0 10px #fff, 0 0 15px #fff, 0 0 20px #FF1177, 0 0 35px #FF1177, 0 0 40px #FF1177, 0 0 50px #FF1177, 0 0 75px #FF1177;
-	@include animation(flicker 5s linear infinite alternate);
+	text-shadow: 0 0 5px #fff, 0 0 10px #fff, 0 0 15px #fff, 0 0 20px $colour-primary, 0 0 35px $colour-primary, 0 0 40px $colour-primary, 0 0 50px $colour-primary, 0 0 75px $colour-primary;
 }
 
-@include keyframes(flicker) {
-	0% {
-		opacity: 1;
-	}
+.section-profile {
+	padding: 100px 0 150px;
 
-	49% {
-		opacity: 1;
+	h2 {
+		margin-bottom: 70px;
 	}
+}
 
-	50% {
-		opacity: 0;
+.section-work {
+	position: relative;
+	background-color: $colour-background-neg;
+	padding: 100px 0 200px;
+}
+
+.bg-work {
+	position: absolute;
+	top: 0;
+	left: 0;
+	height: 100%;
+	width: 100%;
+	background-repeat: no-repeat;
+	background-size: cover;
+	background-position: center;
+	background-attachment: fixed;
+	box-shadow: inset 0 0 200px #000;
+
+	&.venture {
+		background-image: url("/_includes/img/backgrounds/work-venture.jpg");
+		background-position: bottom;
 	}
+}
 
-	51% {
-		opacity: 0.7;
-	}
-
-	52% {
-		opacity: 0;
-	}
-
-	53% {
-		opacity: 0.7;
-	}
-
-	54% {
-		opacity: 0;
-	}
-
-	55% {
-		opacity: 0.7;
-	}
-
-	79% {
-		opacity: 0.7;
-	}
-
-	79.5% {
-		opacity: 0;
-	}
-
-	80% {
-		opacity: 1;
-	}
-
-	80.5% {
-		opacity: 0;
-	}
-
-	81% {
-		opacity: 1;
-	}
-
+.selector-work {
+	background-color: $colour-background-beta;
+	height: 300px;
 }
