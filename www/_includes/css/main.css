@@ -210,11 +210,10 @@ Example:
   margin: 0 auto;
   width: 100%;
 }
-@media all and (min-width: 1440px) {
+@media all and (min-width: 960px) {
   .grid {
     position: relative;
     max-width: 960px;
-    padding: 0 20px;
   }
 }
 .grid:after {
@@ -415,7 +414,6 @@ h1 {
 
 h2 {
   font-size: 48px;
-  text-align: center;
   margin: 10px 0;
   color: #374049;
   line-height: 0.9;
@@ -436,10 +434,8 @@ h2.h2-beta {
 }
 
 h3 {
-  font-size: 30px;
+  font-size: 24px;
   color: #374049;
-  text-transform: uppercase;
-  font-weight: bold;
   line-height: 0.9;
 }
 @media all and (max-width: 960px) {
@@ -696,6 +692,25 @@ header {
   height: 60px;
   background-color: #fff;
   z-index: 2;
+  text-align: right;
+}
+header ul {
+  display: inline-block;
+  padding: 20px 0;
+}
+header li {
+  display: inline-block;
+  margin-left: 20px;
+}
+header a {
+  opacity: 0.7;
+  -moz-transition: opacity 0.4s ease-in-out;
+  -o-transition: opacity 0.4s ease-in-out;
+  -webkit-transition: opacity 0.4s ease-in-out;
+  transition: opacity 0.4s ease-in-out;
+}
+header a:hover {
+  opacity: 1;
 }
 
 /*********************
@@ -784,13 +799,119 @@ Stylesheet:
   background-position: center;
   background-attachment: fixed;
   box-shadow: inset 0 0 200px #000;
+  opacity: 0;
+  -moz-transition: opacity 0.4s ease-in-out;
+  -o-transition: opacity 0.4s ease-in-out;
+  -webkit-transition: opacity 0.4s ease-in-out;
+  transition: opacity 0.4s ease-in-out;
 }
 .bg-work.venture {
   background-image: url("/_includes/img/backgrounds/work-venture.jpg");
   background-position: bottom;
 }
+.bg-work.trade {
+  background-image: url("/_includes/img/backgrounds/work-dulux.jpg");
+}
+.bg-work.daretoshare {
+  background-image: url("/_includes/img/backgrounds/work-venture.jpg");
+}
+.bg-work.wlty {
+  background-image: url("/_includes/img/backgrounds/work-pandora.jpg");
+}
+.bg-work.clubseat {
+  background-image: url("/_includes/img/backgrounds/work-seat.jpg");
+}
+.bg-work.active {
+  opacity: 1;
+}
 
 .selector-work {
   background-color: #fff;
   height: 300px;
+  text-align: center;
+  padding: 50px 20px;
+}
+.selector-work a {
+  display: inline-block;
+  width: 104px;
+  height: 100px;
+  background-repeat: no-repeat;
+  background-position: center;
+  opacity: 0.5;
+  -moz-transition: opacity 0.4s ease-in-out;
+  -o-transition: opacity 0.4s ease-in-out;
+  -webkit-transition: opacity 0.4s ease-in-out;
+  transition: opacity 0.4s ease-in-out;
+}
+.selector-work a:hover {
+  opacity: 1;
+}
+.selector-work li {
+  display: inline-block;
+  margin: 0 10px;
+}
+.selector-work li.chivas a {
+  background-image: url("/_includes/img/logos/chivas.png");
+}
+.selector-work li.sainsburys a {
+  background-image: url("/_includes/img/logos/sainsburys.png");
+}
+.selector-work li.dulux a {
+  background-image: url("/_includes/img/logos/dulux.png");
+}
+.selector-work li.pandora a {
+  background-image: url("/_includes/img/logos/pandora.png");
+}
+.selector-work li.seat a {
+  background-image: url("/_includes/img/logos/seat.png");
+}
+.selector-work li.active a {
+  opacity: 1;
+}
+
+.project-description {
+  position: relative;
+  text-align: right;
+}
+.project-description h3, .project-description p {
+  color: #fff;
+  padding: 10px;
+}
+.project-description p {
+  padding-left: 100px;
+}
+.project-description a {
+  text-decoration: underline;
+}
+.project-description li {
+  position: absolute;
+  top: 0;
+  right: 0;
+  opacity: 0;
+  -moz-transition: opacity 0.4s ease-in-out;
+  -o-transition: opacity 0.4s ease-in-out;
+  -webkit-transition: opacity 0.4s ease-in-out;
+  transition: opacity 0.4s ease-in-out;
+}
+.project-description li.active {
+  opacity: 1;
+}
+
+.contact-container {
+  text-align: center;
+}
+.contact-container li {
+  display: inline-block;
+  width: 50px;
+  margin: 50px 25px 0;
+}
+.contact-container a {
+  opacity: 0.5;
+  -moz-transition: opacity 0.4s ease-in-out;
+  -o-transition: opacity 0.4s ease-in-out;
+  -webkit-transition: opacity 0.4s ease-in-out;
+  transition: opacity 0.4s ease-in-out;
+}
+.contact-container a:hover {
+  opacity: 1;
 }

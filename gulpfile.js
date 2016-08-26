@@ -82,7 +82,7 @@ gulp.task('clean:dist', function() {
 
 // Watch Files For Changes
 gulp.task('watch', function() {
-    gulp.watch(srcDir + '/js/*.js', ['lint', 'concat']);
+    gulp.watch(srcDir + '/js/**/*.js', ['lint', 'concat']);
     gulp.watch(srcDir + '/sass/**/*.scss', ['compass']);
 });
 

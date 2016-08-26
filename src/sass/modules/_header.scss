@@ -16,4 +16,24 @@ header {
 	height: 60px;
 	background-color: $colour-background-beta;
 	z-index: 2;
+	text-align: right;
+
+	ul {
+		display: inline-block;
+		padding: 20px 0;
+	}
+
+	li {
+		display: inline-block;
+		margin-left: 20px;
+	}
+
+	a {
+		opacity: 0.7;
+		@include transition(opacity 0.4s ease-in-out);
+
+		&:hover {
+			opacity: 1;
+		}
+	}
 }

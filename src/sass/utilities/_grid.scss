@@ -39,16 +39,16 @@ Example:
 	margin: 0 auto;
 	width: 100%;
 
-	// @include breakpoint(desktop) {
-	// 	position: relative;
-	// 	max-width: $grid-width;
-	// }
-
-	@include breakpoint(extended) {
+	@include breakpoint(desktop) {
 		position: relative;
 		max-width: $grid-width;
-		padding: 0 $grid-padding-outer;
 	}
+
+	// @include breakpoint(extended) {
+	// 	position: relative;
+	// 	max-width: $grid-width;
+	// 	padding: 0 $grid-padding-outer;
+	// }
 
 	&:after {
 		content: "";

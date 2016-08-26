@@ -66,7 +66,6 @@ h1 {
 
 h2 {
 	font-size: 48px;
-  	text-align: center;
 	margin: 10px 0;
 	color: $colour-header;
 	line-height: 0.9;
@@ -88,11 +87,8 @@ h2 {
 
 h3 {
 
-	font-size: 30px;
-
+	font-size: 24px;
 	color: $colour-header;
-	text-transform: uppercase;
-	font-weight: bold;
 	line-height: 0.9;
 
 	@include breakpoint(false, desktop) {
