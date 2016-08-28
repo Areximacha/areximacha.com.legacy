@@ -19,6 +19,10 @@ Stylesheet:
 	background-position: center;
 	background-attachment: fixed;
 	box-shadow: inset 0 0 200px #000;
+
+	@include breakpoint(false, desktop) {
+		padding: 200px 0 150px;
+	}
 }
 
 .overlay {
@@ -55,12 +59,36 @@ Stylesheet:
 	h2 {
 		margin-bottom: 70px;
 	}
+
+	@include breakpoint(false, desktop) {
+		padding: 50px 50px 75px;
+		
+		h2 {
+			text-align: center;
+		}
+	}
+
+	@include breakpoint(false, desktop) {
+
+		h2 {
+			font-size: 25px;
+			margin-bottom: 35px;
+		}
+	}
 }
 
 .section-work {
 	position: relative;
 	background-color: $colour-background-neg;
 	padding: 100px 0 200px;
+
+	@include breakpoint(false, desktop) {
+		padding: 85px 0 0;
+	}
+
+	@include breakpoint(false, tablet) {
+		padding: 140px 0 0;
+	}
 }
 
 .bg-work {
@@ -87,7 +115,7 @@ Stylesheet:
 	}
 
 	&.daretoshare {
-		background-image: url("/_includes/img/backgrounds/work-venture.jpg");
+		background-image: url("/_includes/img/backgrounds/work-sainsburys.jpg");
 	}
 
 	&.wlty {
@@ -107,7 +135,11 @@ Stylesheet:
 	background-color: $colour-background-beta;
 	height: 300px;
 	text-align: center;
-	padding: 50px 20px;
+	padding: 20px 20px 0;
+
+	h3 {
+		padding-bottom: 20px;
+	}
 
 	a {
 		display: inline-block;
@@ -121,10 +153,6 @@ Stylesheet:
 		&:hover {
 			opacity: 1;
 		}
-	}
-
-	ul {
-		
 	}
 
 	li {
@@ -153,6 +181,25 @@ Stylesheet:
 
 		&.active a {
 			opacity: 1;
+		}
+	}
+
+	@include breakpoint(false, desktop) {
+		position: absolute;
+		top: 0;
+		left: 0;
+		width: 100%;
+		height: auto;
+		padding: 0 10px;
+
+		h3 {
+			padding-bottom: 10px;
+		}
+
+		a {
+			height: 50px;
+			width: 75px;
+			background-size: contain;
 		}
 	}
 }
@@ -185,10 +232,32 @@ Stylesheet:
 			opacity: 1;
 		}
 	}
+
+	@include breakpoint(false, desktop) {
+		top: 0;
+		height: 300px;
+
+		li {
+			top: auto;
+			bottom: 20px;
+		}
+
+		p {
+			padding-left: 0;
+		}
+	}
+
+	@include breakpoint(false, tablet) {
+		height: 350px;
+	}
 }
 
 .contact-container {
 	text-align: center;
+
+	h2 {
+		text-align: left;
+	}
 
 	li {
 		display: inline-block;
@@ -203,5 +272,27 @@ Stylesheet:
 		&:hover {
 			opacity: 1;
 		}
+	}
+
+	@include breakpoint(false, desktop) {
+
+		h2 {
+			text-align: center;
+		}
+	}
+
+	@include breakpoint(false, tablet) {
+
+		li {
+			width: 25px;
+			margin: 50px 15px 0
+		}
+	}
+}
+
+.section-contact {
+
+	@include breakpoint(false, desktop) {
+		padding: 50px 0;
 	}
 }

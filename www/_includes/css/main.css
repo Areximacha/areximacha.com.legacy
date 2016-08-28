@@ -694,9 +694,14 @@ header {
   z-index: 2;
   text-align: right;
 }
-header ul {
+header .main-nav {
   display: inline-block;
   padding: 20px 0;
+}
+@media all and (max-width: 960px) {
+  header .main-nav {
+    display: none;
+  }
 }
 header li {
   display: inline-block;
@@ -710,6 +715,22 @@ header a {
   transition: opacity 0.4s ease-in-out;
 }
 header a:hover {
+  opacity: 1;
+}
+header .logo {
+  text-align: left;
+  padding: 20px 0;
+}
+header .logo a {
+  font-weight: 600;
+  font-size: 20px;
+  opacity: 0.4;
+  -moz-transition: opacity 0.4s ease-in-out;
+  -o-transition: opacity 0.4s ease-in-out;
+  -webkit-transition: opacity 0.4s ease-in-out;
+  transition: opacity 0.4s ease-in-out;
+}
+header .logo a:hover {
   opacity: 1;
 }
 
@@ -746,6 +767,11 @@ Stylesheet:
   background-attachment: fixed;
   box-shadow: inset 0 0 200px #000;
 }
+@media all and (max-width: 960px) {
+  .hero-container {
+    padding: 200px 0 150px;
+  }
+}
 
 .overlay {
   position: absolute;
@@ -781,11 +807,35 @@ Stylesheet:
 .section-profile h2 {
   margin-bottom: 70px;
 }
+@media all and (max-width: 960px) {
+  .section-profile {
+    padding: 50px 50px 75px;
+  }
+  .section-profile h2 {
+    text-align: center;
+  }
+}
+@media all and (max-width: 960px) {
+  .section-profile h2 {
+    font-size: 25px;
+    margin-bottom: 35px;
+  }
+}
 
 .section-work {
   position: relative;
   background-color: #333;
   padding: 100px 0 200px;
+}
+@media all and (max-width: 960px) {
+  .section-work {
+    padding: 85px 0 0;
+  }
+}
+@media all and (max-width: 680px) {
+  .section-work {
+    padding: 140px 0 0;
+  }
 }
 
 .bg-work {
@@ -813,7 +863,7 @@ Stylesheet:
   background-image: url("/_includes/img/backgrounds/work-dulux.jpg");
 }
 .bg-work.daretoshare {
-  background-image: url("/_includes/img/backgrounds/work-venture.jpg");
+  background-image: url("/_includes/img/backgrounds/work-sainsburys.jpg");
 }
 .bg-work.wlty {
   background-image: url("/_includes/img/backgrounds/work-pandora.jpg");
@@ -829,7 +879,10 @@ Stylesheet:
   background-color: #fff;
   height: 300px;
   text-align: center;
-  padding: 50px 20px;
+  padding: 20px 20px 0;
+}
+.selector-work h3 {
+  padding-bottom: 20px;
 }
 .selector-work a {
   display: inline-block;
@@ -868,6 +921,24 @@ Stylesheet:
 .selector-work li.active a {
   opacity: 1;
 }
+@media all and (max-width: 960px) {
+  .selector-work {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: auto;
+    padding: 0 10px;
+  }
+  .selector-work h3 {
+    padding-bottom: 10px;
+  }
+  .selector-work a {
+    height: 50px;
+    width: 75px;
+    background-size: contain;
+  }
+}
 
 .project-description {
   position: relative;
@@ -896,9 +967,30 @@ Stylesheet:
 .project-description li.active {
   opacity: 1;
 }
+@media all and (max-width: 960px) {
+  .project-description {
+    top: 0;
+    height: 300px;
+  }
+  .project-description li {
+    top: auto;
+    bottom: 20px;
+  }
+  .project-description p {
+    padding-left: 0;
+  }
+}
+@media all and (max-width: 680px) {
+  .project-description {
+    height: 350px;
+  }
+}
 
 .contact-container {
   text-align: center;
+}
+.contact-container h2 {
+  text-align: left;
 }
 .contact-container li {
   display: inline-block;
@@ -914,4 +1006,21 @@ Stylesheet:
 }
 .contact-container a:hover {
   opacity: 1;
+}
+@media all and (max-width: 960px) {
+  .contact-container h2 {
+    text-align: center;
+  }
+}
+@media all and (max-width: 680px) {
+  .contact-container li {
+    width: 25px;
+    margin: 50px 15px 0;
+  }
+}
+
+@media all and (max-width: 960px) {
+  .section-contact {
+    padding: 50px 0;
+  }
 }

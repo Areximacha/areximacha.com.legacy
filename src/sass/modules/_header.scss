@@ -18,9 +18,13 @@ header {
 	z-index: 2;
 	text-align: right;
 
-	ul {
+	.main-nav {
 		display: inline-block;
 		padding: 20px 0;
+
+		@include breakpoint(false, desktop) {
+			display: none;
+		}
 	}
 
 	li {
@@ -34,6 +38,22 @@ header {
 
 		&:hover {
 			opacity: 1;
+		}
+	}
+
+	.logo {
+		text-align: left;
+		padding: 20px 0;
+
+		a {
+			font-weight: 600;
+			font-size: 20px;
+			opacity: 0.4;
+			@include transition(opacity 0.4s ease-in-out);
+
+			&:hover {
+				opacity: 1;
+			}
 		}
 	}
 }
