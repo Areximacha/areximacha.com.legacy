@@ -47,7 +47,7 @@ gulp.task('uglify', function() {
 
 // Compress images
 gulp.task('imagemin', function() {
-    return gulp.src(srcDir + '/img/**/*.+(png|jpg|gif|svg)')
+    return gulp.src(srcDir + '/img/**/*.+(png|jpg|gif|svg|ico)')
         .pipe(imagemin({
             // Setting interlaced to true
             interlaced: true,
