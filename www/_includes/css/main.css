@@ -689,7 +689,7 @@ Stylesheet:
 
 *********************/
 header {
-  position: absolute;
+  position: relative;
   top: 0;
   left: 0;
   width: 100%;
@@ -848,7 +848,7 @@ Stylesheet:
 *********************/
 .hero-container {
   position: relative;
-  padding: 200px 0 150px;
+  padding: 175px 0 175px;
   background-color: #333;
   text-align: center;
   background-image: url("/_includes/img/backgrounds/bg-hero.jpg");
@@ -859,7 +859,7 @@ Stylesheet:
 }
 @media all and (max-width: 960px) {
   .hero-container {
-    padding: 150px 0 100px;
+    padding: 100px 0 100px;
   }
 }
 
