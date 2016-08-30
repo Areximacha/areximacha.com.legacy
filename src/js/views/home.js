@@ -3,13 +3,36 @@
 //Additionally there is an init() function that gets called by the main app script when the modules are ready
 var homeScript = (function() {
 
+	function mobileNavToggle() {
+
+		$('.mobile-nav-btn').on('click', function(e) {
+			var self = $(e.currentTarget),
+				nav = $('nav');
+
+			if (self.hasClass('active')) {
+				self.removeClass('active');
+				nav.removeClass('active');
+			} else {
+				self.addClass('active');
+				nav.addClass('active');
+			}
+		});
+	}
+
 	function navigationSelect() {
 
-		$('.main-nav a').on('click', function(e) {
+		$('nav a').on('click', function(e) {
 			e.preventDefault();
 
 			var self = $(e.currentTarget),
-				selectedNav = self.data('nav');
+				selectedNav = self.data('nav'),
+				nav = self.parentsUntil('nav').parent(),
+				navBtn = nav.siblings('.mobile-nav-btn');
+
+			if (nav.hasClass('active')) {
+				navBtn.removeClass('active');
+				nav.removeClass('active');
+			}
 
 			$('html, body').animate({
 				scrollTop: $('.section-' + selectedNav).offset().top
@@ -44,6 +67,7 @@ var homeScript = (function() {
     function init() {
 
     	navigationSelect();
+    	mobileNavToggle();
     	workSelect();
     }
 

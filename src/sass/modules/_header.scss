@@ -18,18 +18,41 @@ header {
 	z-index: 2;
 	text-align: right;
 
-	.main-nav {
+	nav {
 		display: inline-block;
 		padding: 20px 0;
 
 		@include breakpoint(false, desktop) {
-			display: none;
+			position: fixed;
+			top: 0;
+			left: 0;
+			height: 100vh;
+			width: calc(100% - 60px);
+			background-color: $colour-background-delta;
+			opacity: 0.9;
+			@include translate(-100%, 0);
+			@include transition(all 0.4s ease-in-out);
+
+			&.active {
+				@include translate(0, 0);
+			}
 		}
 	}
 
 	li {
 		display: inline-block;
 		margin-left: 20px;
+
+		@include breakpoint(false, desktop) {
+			display: block;
+			margin: 40px 0;
+			text-align: center;
+			color: $colour-copy-neg;
+
+			a {
+				opacity: 1;
+			}
+		}
 	}
 
 	a {
@@ -55,5 +78,49 @@ header {
 				opacity: 1;
 			}
 		}
+	}
+
+	.mobile-nav-btn {
+		display: none;
+
+		@include breakpoint(false, desktop) {
+			position: absolute;
+			top: 0;
+			right: 0;
+			display: inline-block;
+			width: 60px;
+			height: 60px;
+			text-align: center;
+			line-height: 10px;
+			padding: 10px 0;
+			cursor: pointer;
+			background-color: $colour-background-beta;
+
+			&.active {
+				position: fixed;
+
+				.bun-top {
+					@include rotate(45deg);
+
+				}
+
+				.bun-bottom {
+					@include rotate(-45deg);
+				}
+
+				.patty {
+					opacity: 0;
+				}
+			}
+		}
+	}
+
+	.hamburger-icon {
+		display: inline-block;
+		width: 30px;
+		height: 3px;
+		background-color: $colour-copy;
+		@include transition(all 0.3s ease-in-out);
+		@include transform-origin (0, 50%);
 	}
 }

@@ -472,6 +472,10 @@ strong {
   font-weight: 600;
 }
 
+small {
+  font-size: 14px;
+}
+
 i {
   display: inline-block;
   background-repeat: no-repeat;
@@ -694,18 +698,49 @@ header {
   z-index: 2;
   text-align: right;
 }
-header .main-nav {
+header nav {
   display: inline-block;
   padding: 20px 0;
 }
 @media all and (max-width: 960px) {
-  header .main-nav {
-    display: none;
+  header nav {
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 100vh;
+    width: calc(100% - 60px);
+    background-color: #000;
+    opacity: 0.9;
+    -moz-transform: translate(-100%, 0);
+    -ms-transform: translate(-100%, 0);
+    -webkit-transform: translate(-100%, 0);
+    transform: translate(-100%, 0);
+    -moz-transition: all 0.4s ease-in-out;
+    -o-transition: all 0.4s ease-in-out;
+    -webkit-transition: all 0.4s ease-in-out;
+    transition: all 0.4s ease-in-out;
+  }
+  header nav.active {
+    -moz-transform: translate(0, 0);
+    -ms-transform: translate(0, 0);
+    -webkit-transform: translate(0, 0);
+    transform: translate(0, 0);
   }
 }
 header li {
   display: inline-block;
   margin-left: 20px;
+}
+@media all and (max-width: 960px) {
+  header li {
+    display: block;
+    margin: 40px 0;
+    text-align: center;
+    color: #fff;
+  }
+  header li a {
+    opacity: 1;
+  }
 }
 header a {
   opacity: 0.7;
@@ -733,6 +768,56 @@ header .logo a {
 header .logo a:hover {
   opacity: 1;
 }
+header .mobile-nav-btn {
+  display: none;
+}
+@media all and (max-width: 960px) {
+  header .mobile-nav-btn {
+    position: absolute;
+    top: 0;
+    right: 0;
+    display: inline-block;
+    width: 60px;
+    height: 60px;
+    text-align: center;
+    line-height: 10px;
+    padding: 10px 0;
+    cursor: pointer;
+    background-color: #fff;
+  }
+  header .mobile-nav-btn.active {
+    position: fixed;
+  }
+  header .mobile-nav-btn.active .bun-top {
+    -moz-transform: rotate(45deg);
+    -ms-transform: rotate(45deg);
+    -webkit-transform: rotate(45deg);
+    transform: rotate(45deg);
+  }
+  header .mobile-nav-btn.active .bun-bottom {
+    -moz-transform: rotate(-45deg);
+    -ms-transform: rotate(-45deg);
+    -webkit-transform: rotate(-45deg);
+    transform: rotate(-45deg);
+  }
+  header .mobile-nav-btn.active .patty {
+    opacity: 0;
+  }
+}
+header .hamburger-icon {
+  display: inline-block;
+  width: 30px;
+  height: 3px;
+  background-color: #333;
+  -moz-transition: all 0.3s ease-in-out;
+  -o-transition: all 0.3s ease-in-out;
+  -webkit-transition: all 0.3s ease-in-out;
+  transition: all 0.3s ease-in-out;
+  -moz-transform-origin: 0 50%;
+  -ms-transform-origin: 0 50%;
+  -webkit-transform-origin: 0 50%;
+  transform-origin: 0 50%;
+}
 
 /*********************
 
@@ -743,6 +828,12 @@ Stylesheet:
 	Footer module stylesheet
 
 *********************/
+footer {
+  background-color: #333;
+  text-align: right;
+  color: #fff;
+}
+
 /******************************************************************
 Views
 ******************************************************************/
