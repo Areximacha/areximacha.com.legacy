@@ -16,6 +16,7 @@ Stylesheet:
 	background-image: url("/_includes/img/backgrounds/bg-hero.jpg");
 	background-repeat: no-repeat;
 	background-size: cover;
+	background-position: 50% 0px;
 	box-shadow: inset 0 0 200px #000;
 
 	@include breakpoint(false, desktop) {
@@ -128,6 +129,7 @@ Stylesheet:
 
 	@include breakpoint(false, desktop) {
 		background-attachment: scroll;
+		background-position: center;
 	}
 }
 
