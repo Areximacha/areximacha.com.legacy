@@ -848,20 +848,17 @@ Stylesheet:
 *********************/
 .hero-container {
   position: relative;
-  padding: 300px 0 200px;
+  padding: 200px 0 150px;
   background-color: #333;
   text-align: center;
   background-image: url("/_includes/img/backgrounds/bg-hero.jpg");
   background-repeat: no-repeat;
   background-size: cover;
-  background-position: center;
-  background-attachment: fixed;
   box-shadow: inset 0 0 200px #000;
 }
 @media all and (max-width: 960px) {
   .hero-container {
-    padding: 200px 0 150px;
-    background-attachment: scroll;
+    padding: 150px 0 100px;
   }
 }
 
@@ -938,7 +935,6 @@ Stylesheet:
   width: 100%;
   background-repeat: no-repeat;
   background-size: cover;
-  background-position: center;
   background-attachment: fixed;
   box-shadow: inset 0 0 200px #000;
   opacity: 0;
@@ -949,7 +945,6 @@ Stylesheet:
 }
 .bg-work.venture {
   background-image: url("/_includes/img/backgrounds/work-venture.jpg");
-  background-position: bottom;
 }
 .bg-work.trade {
   background-image: url("/_includes/img/backgrounds/work-dulux.jpg");

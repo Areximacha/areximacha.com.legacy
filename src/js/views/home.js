@@ -64,8 +64,26 @@ var homeScript = (function() {
 		});
 	}
 
+	function backgroundParallax() {
+
+		var parallax = $('.parallax'),
+			speed = 0.2;
+
+		window.onscroll = function() {
+			[].slice.call(parallax).forEach(function(el,i){
+
+	      		var windowYOffset = window.pageYOffset,
+		          	elBackgrounPos = "50% -" + (windowYOffset * speed) + "px";
+
+		      	el.style.backgroundPosition = elBackgrounPos;
+
+		    });
+		};
+	}
+
     function init() {
 
+    	backgroundParallax();
     	navigationSelect();
     	mobileNavToggle();
     	workSelect();
